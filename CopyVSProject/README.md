@@ -12,5 +12,5 @@ Visual Studio 2022
 
 ## Screen Shot
 
-<img src="images/keycap/ahkez-keycap-transparent-128.png"> 
+![Screenshot](CopyVSProject.png)
  
