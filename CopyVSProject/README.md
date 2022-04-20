@@ -7,8 +7,7 @@
 
 ## Build Environment
 
-Visual Studio 2022
-.Net Framework v4.8
+Visual Studio 2022 with .Net Framework v4.8
 
 ## Screen Shot
 
