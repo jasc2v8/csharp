@@ -3,7 +3,7 @@
 ## Features
 * Test utility classes
 * Add a new test in Form1.cs: public void TEST_NewTest()
-* The program will scan the Form1.cs file and add teh test to the listbox
+* The program will scan the Form1.cs file and add the new test to the listbox
 
 ## Build Environment
 
