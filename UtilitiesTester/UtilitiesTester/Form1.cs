@@ -14,7 +14,7 @@ using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using UTIL;
 
-namespace Utilities_Tester
+namespace UtilitiesTester_Tester
 {
     public partial class Form1 : Form
     {

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Utilities_Tester.Properties
+namespace UtilitiesTester_Tester.Properties
 {
 
 

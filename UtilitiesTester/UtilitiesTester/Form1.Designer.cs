@@ -1,4 +1,4 @@
-﻿namespace Utilities_Tester
+﻿namespace UtilitiesTester_Tester
 {
     partial class Form1
     {
@@ -82,7 +82,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(295, 0);
+            this.label2.Location = new System.Drawing.Point(296, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(124, 15);

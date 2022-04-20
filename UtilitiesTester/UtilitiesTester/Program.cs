@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Utilities_Tester
+namespace UtilitiesTester_Tester
 {
     internal static class Program
     {
