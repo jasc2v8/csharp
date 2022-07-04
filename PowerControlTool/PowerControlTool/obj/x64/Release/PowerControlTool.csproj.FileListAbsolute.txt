@@ -1,0 +1,11 @@
+D:\Software\DEV\Work\csharp\WIP\PowerControlTool\PowerControlTool\bin\x64\Release\PowerControlTool.exe
+D:\Software\DEV\Work\csharp\WIP\PowerControlTool\PowerControlTool\bin\x64\Release\PowerControlTool.pdb
+D:\Software\DEV\Work\csharp\WIP\PowerControlTool\PowerControlTool\obj\x64\Release\PowerControlTool.csproj.AssemblyReference.cache
+D:\Software\DEV\Work\csharp\WIP\PowerControlTool\PowerControlTool\obj\x64\Release\PowerControlTool.csproj.SuggestedBindingRedirects.cache
+D:\Software\DEV\Work\csharp\WIP\PowerControlTool\PowerControlTool\obj\x64\Release\PowerControlTool.FormCountDown.resources
+D:\Software\DEV\Work\csharp\WIP\PowerControlTool\PowerControlTool\obj\x64\Release\PowerControlTool.FormMain.resources
+D:\Software\DEV\Work\csharp\WIP\PowerControlTool\PowerControlTool\obj\x64\Release\PowerControlTool.Properties.Resources.resources
+D:\Software\DEV\Work\csharp\WIP\PowerControlTool\PowerControlTool\obj\x64\Release\PowerControlTool.csproj.GenerateResource.cache
+D:\Software\DEV\Work\csharp\WIP\PowerControlTool\PowerControlTool\obj\x64\Release\PowerControlTool.csproj.CoreCompileInputs.cache
+D:\Software\DEV\Work\csharp\WIP\PowerControlTool\PowerControlTool\obj\x64\Release\PowerControlTool.exe
+D:\Software\DEV\Work\csharp\WIP\PowerControlTool\PowerControlTool\obj\x64\Release\PowerControlTool.pdb
