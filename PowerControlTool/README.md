@@ -8,9 +8,9 @@
 
 ## Build Environment
 
-Visual Studio 2022 with .Net Framework v4.8
+Visual Studio 2022 with .Net Framework v3.5 (for compatability)
 
-C# Windows Desktop: Windows Forms App (.NET Framework)
+C# Windows Desktop Windows Forms App (.NET Framework)
 
 ## Screenshot
 
