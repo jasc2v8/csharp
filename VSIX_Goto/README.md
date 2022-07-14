@@ -26,4 +26,8 @@ The GOTO window will be docked to the left of the solution explorer.
 
 Use the menu, Extensions, Manage, to uninstall.
 
+## Screenshot
+
+![Screenshot](GOTO Tool Window.png)
+ 
 
