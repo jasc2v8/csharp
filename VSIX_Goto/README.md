@@ -28,6 +28,6 @@ Use the menu, Extensions, Manage, to uninstall.
 
 ## Screenshot
 
-![Screenshot](GOTO Tool Window.png)
+![Screenshot](GotoToolWindow.png)
  
 
