@@ -1,6 +1,6 @@
 ﻿# VSIX GOTO Tool Window
 
-A basic GOTO implementation for Visual Studio 2022.
+A Visual Studio 2022 Extension to quickly navigate source code.
 
 When a .cs file is selected, the source code outline appears in the GOTO Window.
 
