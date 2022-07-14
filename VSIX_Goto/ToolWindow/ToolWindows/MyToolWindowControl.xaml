@@ -10,49 +10,54 @@
              xmlns:toolkit="clr-namespace:Community.VisualStudio.Toolkit;assembly=Community.VisualStudio.Toolkit"
              toolkit:Themes.UseVsTheme="True"
              mc:Ignorable="d"
-             d:DesignHeight="475" d:DesignWidth="300"
-             Name="GotoToolWindow"  Loaded="MyToolWindow_Loaded">
-    <Grid>
-        <StackPanel Orientation="Vertical">
-            <DockPanel Height="35" Width="300" Margin="0,3,0,0">
-                <TextBox x:Name="textBoxFilter" DockPanel.Dock="Left" Height="30" TextWrapping="NoWrap" Width="245" Margin="3,3,0,0" TextChanged="textBoxSearch_TextChanged"/>
-                <Button Click="ButtonRefresh_OnClick" ToolTip="Refresh" Margin="3,3,3,3">
-                    <Button.Template>
-                        <ControlTemplate>
-                            <imaging:CrispImage Width="16" Height="16" Moniker="{x:Static catalog:KnownMonikers.Refresh}" />
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
-            </DockPanel>
+             d:DesignHeight="475" d:DesignWidth="340"
+             Name="GotoToolWindow">
 
-            <ListView x:Name="listView" Height="428" Width="296" Margin="0,3,0,0" KeyDown="listBoxGoto_KeyDown" MouseDoubleClick="listBoxGoto_MouseDoubleClick" SelectionMode="Single">
-                <ListView.ItemContainerStyle>
-                    <Style TargetType="{x:Type ListViewItem}">
-                        <Style.Triggers>
-                            <Trigger Property="IsSelected" Value="true" >
-                                <Setter Property="Foreground" Value="White" />
-                                <Setter Property="Background" Value="Black" />
-                            </Trigger>
-                            <Trigger Property="IsMouseOver" Value="true">
-                                <Setter Property="Background" Value="Transparent"/>
-                                <Setter Property="BorderBrush" Value="Yellow"/>
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </ListView.ItemContainerStyle>
-                <ListView.View>
-                    <GridView>
-                        <GridViewColumn Header="Text" Width="300" DisplayMemberBinding="{Binding Text}" />
-                        <GridViewColumn Header="Number" Width="0" DisplayMemberBinding="{Binding Number}" />
-                        <GridView.ColumnHeaderContainerStyle>
-                            <Style TargetType="GridViewColumnHeader">
-                                <Setter Property="Visibility" Value="Collapsed" />
-                            </Style>
-                        </GridView.ColumnHeaderContainerStyle>
-                    </GridView>
-                </ListView.View>
-            </ListView>
+    <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="35" Width="326">
+            <TextBox x:Name="textBoxFilter" Height="30" TextWrapping="NoWrap" Width="190" Margin="0,3,0,0" TextChanged="textBoxSearch_TextChanged" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Button Click="ButtonClear_OnClick" ToolTip="Clear Filter" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Button.Template>
+                    <ControlTemplate>
+                        <imaging:CrispImage Width="16" Height="16" Moniker="{x:Static catalog:KnownMonikers.DeleteFilter}" />
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Click="ButtonRefresh_OnClick" ToolTip="Refresh" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Button.Template>
+                    <ControlTemplate>
+                        <imaging:CrispImage Width="16" Height="16" Moniker="{x:Static catalog:KnownMonikers.Refresh}" />
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
         </StackPanel>
-    </Grid>
 
+        <ListView x:Name="listView" Height="428" Width="330" Margin="0,3,0,0" KeyDown="listBoxGoto_KeyDown" MouseDoubleClick="listBoxGoto_MouseDoubleClick" SelectionMode="Single" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="{x:Type ListViewItem}">
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="true" >
+                            <Setter Property="Foreground" Value="White" />
+                            <Setter Property="Background" Value="Black" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="BorderBrush" Value="Yellow"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.View>
+                <GridView>
+                    <GridView.ColumnHeaderContainerStyle>
+                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                            <Setter Property="Visibility" Value="Collapsed" />
+                        </Style>
+                    </GridView.ColumnHeaderContainerStyle>
+                    <GridViewColumn Header="Text" Width="300" DisplayMemberBinding="{Binding Text}" />
+                    <GridViewColumn Header="Number" Width="0" DisplayMemberBinding="{Binding Number}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </StackPanel>
 </UserControl>

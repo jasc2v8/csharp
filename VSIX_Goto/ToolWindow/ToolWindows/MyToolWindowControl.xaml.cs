@@ -47,7 +47,6 @@ namespace ToolWindow
     public partial class MyToolWindowControl : UserControl
     {
         private string CurrentActiveDocument { get; set; }
-
         DTE dte { get; set; }= null;
         EnvDTE.WindowEvents winEvents { get; set; } = null;
         EnvDTE.DocumentEvents docEvents { get; set; } = null;
@@ -80,11 +79,6 @@ namespace ToolWindow
 
         }
 
-        private void MyToolWindow_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void DocumentEvents_DocumentSaved(Document Document)
             => UpdateListAsync().FireAndForget();
 
@@ -100,16 +94,16 @@ namespace ToolWindow
 
         private void WindowEvents_WindowActivated(EnvDTE.Window GotFocus, EnvDTE.Window LostFocus)
         {
-            _ = Task.Run(async () =>
+            Task.Run(async () =>
             {
                 await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();
 
-                if (GotFocus.Document.FullName != CurrentActiveDocument)
+                if (CurrentActiveDocument != GotFocus.Document.FullName)
                 {
                     CurrentActiveDocument = GotFocus.Document.FullName;
                     UpdateListAsync().FireAndForget();
                 }
-            });
+            }).FireAndForget();
 
         }
 
@@ -124,14 +118,14 @@ namespace ToolWindow
             {
                 ListItem item = new ListItem();
                 item = (ListItem)listView.Items[listView.SelectedIndex];
-                _ = GotoLineAsync(item.Number);
+                GotoLineAsync(item.Number).FireAndForget();
             }
         }
         private void listBoxGoto_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             ListItem item = new ListItem();
             item = (ListItem)listView.Items[listView.SelectedIndex];
-            _ = GotoLineAsync(item.Number);
+            GotoLineAsync(item.Number).FireAndForget();
         }
 
         private async Task UpdateListAsync()
@@ -156,7 +150,6 @@ namespace ToolWindow
 
             try
             {
-                DTE dte = Package.GetGlobalService(typeof(DTE)) as DTE;
 
                 if (dte.ActiveDocument == null)
                     return String.Empty;
@@ -241,6 +234,11 @@ namespace ToolWindow
             }
 
             return string.Empty;
+        }
+
+        private void ButtonClear_OnClick(object sender, RoutedEventArgs e)
+        {
+            textBoxFilter.Clear();
         }
 
         private void ButtonRefresh_OnClick(object sender, RoutedEventArgs e)
