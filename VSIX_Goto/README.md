@@ -20,7 +20,7 @@ Build the project, open the output folder.
 
 Double-click on the .vsix file to install.
 
-In the Visual Studio menu, choose "View", "Other Windows", then "GOTO Tool Windo"
+In the Visual Studio menu, choose "View", "Other Windows", then "GOTO Tool Window"
 
 The GOTO window will be docked to the left of the solution explorer.
 
