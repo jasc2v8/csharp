@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="ToolWindow.31a000cc-8120-41fe-9067-2fb52d4b78d2" Version="1.3" Language="en-US" Publisher="Jim Dreher" />
+        <Identity Id="ToolWindow.31a000cc-8120-41fe-9067-2fb52d4b78d2" Version="1.4" Language="en-US" Publisher="Jim Dreher" />
         <DisplayName>GotoToolWindow</DisplayName>
         <Description xml:space="preserve">GOTO Tool Window</Description>
         <Icon>Resources\GoToSourceCode_32.png</Icon>

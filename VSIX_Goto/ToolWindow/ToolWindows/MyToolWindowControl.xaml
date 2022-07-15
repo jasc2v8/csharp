@@ -13,26 +13,37 @@
              d:DesignHeight="475" d:DesignWidth="340"
              Name="GotoToolWindow">
 
-    <StackPanel Orientation="Vertical">
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="35" Width="326">
-            <TextBox x:Name="textBoxFilter" Height="30" TextWrapping="NoWrap" Width="190" Margin="0,3,0,0" TextChanged="textBoxSearch_TextChanged" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <Button Click="ButtonClear_OnClick" ToolTip="Clear Filter" HorizontalAlignment="Left" VerticalAlignment="Center">
-                <Button.Template>
-                    <ControlTemplate>
-                        <imaging:CrispImage Width="16" Height="16" Moniker="{x:Static catalog:KnownMonikers.DeleteFilter}" />
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button Click="ButtonRefresh_OnClick" ToolTip="Refresh" HorizontalAlignment="Left" VerticalAlignment="Center">
-                <Button.Template>
-                    <ControlTemplate>
-                        <imaging:CrispImage Width="16" Height="16" Moniker="{x:Static catalog:KnownMonikers.Refresh}" />
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-        </StackPanel>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="230*" />
+            <ColumnDefinition Width="55*" />
+            <ColumnDefinition Width="55*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="46*" />
+            <RowDefinition Height="429*" />
+        </Grid.RowDefinitions>
 
-        <ListView x:Name="listView" Height="428" Width="330" Margin="0,3,0,0" KeyDown="listBoxGoto_KeyDown" MouseDoubleClick="listBoxGoto_MouseDoubleClick" SelectionMode="Single" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+        <TextBox x:Name="textBoxFilter" TextWrapping="NoWrap" TextChanged="textBoxSearch_TextChanged" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Left" Width="220" Height="36"/>
+
+        <Button Grid.Column="1" Margin="5,5,5,5" Click="ButtonClear_OnClick" ToolTip="Clear Filter" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button.Template>
+                <ControlTemplate>
+                    <imaging:CrispImage Width="16" Height="16" Moniker="{x:Static catalog:KnownMonikers.DeleteFilter}" />
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button Grid.Column="2" Margin="5,5,5,5" Click="ButtonRefresh_OnClick" ToolTip="Refresh" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button.Template>
+                <ControlTemplate>
+                    <imaging:CrispImage Width="16" Height="16" Moniker="{x:Static catalog:KnownMonikers.Refresh}" />
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
+        <ListView x:Name="listView" Grid.Row="1" Grid.ColumnSpan="3" Margin="5" KeyDown="listBoxGoto_KeyDown" MouseDoubleClick="listBoxGoto_MouseDoubleClick" SelectionMode="Single" ScrollViewer.HorizontalScrollBarVisibility="Auto">
             <ListView.ItemContainerStyle>
                 <Style TargetType="{x:Type ListViewItem}">
                     <Style.Triggers>
@@ -59,5 +70,5 @@
                 </GridView>
             </ListView.View>
         </ListView>
-    </StackPanel>
+    </Grid>
 </UserControl>
